@@ -10,6 +10,7 @@ import 'amfe-flexible'
 Vue.use(Vant)
 
 Vue.config.productionTip = false
+import './utils/dayjs'
 
 new Vue({
     router,
