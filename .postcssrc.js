@@ -16,7 +16,10 @@ module.exports = {
                 return file.indexOf('vant') !== -1 ? 37.5 : 75
             },
             // 配置要转换的css 属性，此时所有都需要改
-            propList: ['*']
+            propList: ['*'],
+
+            // 配置不要转换的样式资源
+            exclude: 'markdown'
         }
     }
 }

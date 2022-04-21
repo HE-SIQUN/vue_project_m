@@ -1,6 +1,16 @@
 <template>
   <div class="article-item">
-    <van-cell>
+    <van-cell
+      :to="{
+       //根据路由名称进行跳转，也可以用 拼接的方式 to属性与vue-router相似
+       name:'article',
+       // 传递路由动态参数
+       params:{
+         //属性名：路由路径中设计的动态参数的名称
+         articleId:article.art_id
+       }
+     }"
+    >
       <div slot="title" class="title van-multi-ellipsis--l2">{{ article.title }}</div>
       <div slot="label">
         <div v-if="article.cover.type === 3" class="cover-wrap">
@@ -22,6 +32,7 @@
         :src="article.cover.images[0]"
       />
     </van-cell>
+    <!-- 频道编辑 -->
   </div>
 </template>
 

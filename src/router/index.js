@@ -44,6 +44,26 @@ const routes = [
                     import ('@/views/myfile')
             }
         ]
+    },
+    // 需要配置一级路由
+    {
+        path: '/search',
+        name: 'search',
+        component: () =>
+            import ('@/views/search')
+    },
+    {
+        path: '/article/:articleId',
+        name: 'article',
+        component: () =>
+            import ('@/views/article'),
+        props: true //开启props传参，说白了就是把路由参数映射到组件的props中
+    },
+    {
+        name: 'user-profile',
+        path: '/user/profile',
+        component: () =>
+            import ('@/views/user-profile')
     }
 
 ]
